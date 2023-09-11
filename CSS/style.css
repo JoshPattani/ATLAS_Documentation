@@ -148,6 +148,11 @@ nav ul {
   margin: 5%;
 }
 
+.gallery img {
+  max-width: 60%;
+  height: auto;
+}
+
 #gallery {
   justify-content: space-between;
   align-items: center;
