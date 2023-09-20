@@ -112,10 +112,13 @@ nav ul {
 }
 
 .container {
-  min-width: 100%;
-  margin: 0 auto;
+  min-width: 75vw;
+  max-width: 90vw;
+  margin: 0 0vw 10vh 10vw;
   padding: 15px;
   display: flex;
+  border: outset #0056b3;
+  align-self: center;
 }
 
 .blog-container {
@@ -124,13 +127,23 @@ nav ul {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
 }
 
 .post-container {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-container img {
+  max-width: 80%;
+  height: auto;
 }
 
 .example {
@@ -146,6 +159,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   margin: 5%;
+  gap: 5px;
 }
 
 .gallery img {
