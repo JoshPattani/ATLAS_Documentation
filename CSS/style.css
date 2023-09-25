@@ -175,6 +175,23 @@ nav ul {
   margin: 5%;
 }
 
+.gallery2 {
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  height: auto;
+  min-width: 50%;
+}
+
+.gallery2 img {
+  max-width: 60%;
+  height: auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
