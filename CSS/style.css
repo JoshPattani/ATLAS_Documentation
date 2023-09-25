@@ -194,6 +194,18 @@ td {
   border: 1px solid #000000;
 }
 
+.gal {
+  display: flex;
+  max-width: 40%;
+  max-height: 480px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
