@@ -294,5 +294,303 @@
         </div>
       </article>
     </div>
+
+    <!--blog post 2-->
+    <div class="container">
+      <article id="post-2">
+        <div class="post-container">
+          <h2>LA #1 - L-Systems</h2>
+          <h3>Part 1: Plotting L-Systems using Turtle in Processing</h3>
+        </div>
+        <!-- LA1 Part 1-->
+        <div>
+          <h4>Drawing using Processing's primitive functions</h4>
+          <div class="gallery">
+            <script src="https://gist.github.com/JoshPattani/2e2152f1ab4f19a60ba634cc9ba1aa89.js"></script>
+            <p>
+              The program written in the code gist will generate the composite
+              image below. The primitive shapes were made using the built-in
+              functions of Processing.
+            </p>
+            <img src="../assets/La1Part1.png" alt="LA1 Part 1" />
+          </div>
+        </div>
+        <!-- LA1 Part 2-->
+        <div>
+          <h4>Part 2: Drawing using Turtle in Processing</h4>
+          <div class="gallery">
+            <script src="https://gist.github.com/JoshPattani/60ccd6eadca1cbd68c9b684d4c0dae1c.js"></script>
+            <p>
+              The program written in the code gist will image below showing the
+              characters 'I' and 'T'.
+            </p>
+            <img src="../assets/La1Part2a.png" alt="LA1 Part 2" />
+          </div>
+
+          <p>The primitive shapes were made using the Turtle library.</p>
+          <div class="gallery">
+            <script src="https://gist.github.com/JoshPattani/c10d2c8c65dd3fc7e1d9f213e1668352.js"></script>
+            <br />
+            <img src="../assets/La1Part2b.png" alt="LA1 Part 2" />
+            <br /><br />
+            <script src="https://gist.github.com/JoshPattani/66e2b5ebc44630e872993955c9bc6680.js"></script>
+            <br />
+            <img src="../assets/La1Part2c.png" alt="LA1 Part 2" />
+            <br /><br />
+            <script src="https://gist.github.com/JoshPattani/e29a07433948f07cd8f5b4db7d16456d.js"></script>
+            <br />
+            <img src="../assets/La1Part2d.png" alt="LA1 Part 2" />
+          </div>
+        </div>
+        <!-- LA1 Part 3-->
+        <div class="post-container">
+          <div>
+            <h4>Part 3: Plotting L-Systems using Turtle in Processing</h4>
+            <p>
+              The L-System graphics here are composed of the standard alphabet
+              symbols that represent instructions for the turtle. The alphabet
+              is composed of the following symbols:
+            </p>
+            <ul>
+              <li>F - Move forward</li>
+              <li>+ - Turn left</li>
+              <li>- - Turn right</li>
+              <li>[ - Push the current state of the turtle</li>
+              <li>] - Pop the current state of the turtle</li>
+            </ul>
+          </div>
+          <div class="gallery">
+            <h5>Programmatic Implementation of an L-System</h5>
+            <script src="https://gist.github.com/JoshPattani/eaf5867372553c589c7f53f5566e4719.js"></script>
+            <p>Programmatic implementation of an L-System.</p>
+            <br />
+            <!--Code Gist-->
+            <!-- <script src="https://gist.github.com/jpattani/1b0e2b0b4e2b9a0e2e1b0e2b0b4e2b9a.js"></script> -->
+            <script src="https://gist.github.com/JoshPattani/24e88c09059cd26a667f3653e7e58226.js"></script>
+            <p>
+              The main processing sketch for running the LA1 - LSystem Base code
+            </p>
+            <br />
+            <script src="https://gist.github.com/JoshPattani/25d172676664497898453515320c6c7b.js"></script>
+            <p>The LSystem initialization functions for generating L-Systems</p>
+            <br />
+            <p>
+              The following series of images were drawn using L-Systems and
+              Turtle in Processing.
+            </p>
+            <br />
+          </div>
+          <div>
+            <h5>Example 1: TriHexagonal Tiling Pattern</h5>
+            <div class="gallery">
+              <!--Code Gist-->
+              <script src="https://gist.github.com/JoshPattani/840de230a3981443c52609e1fc858acb.js"></script>
+              <!--Axiom and Rules table-->
+              <table>
+                <tr>
+                  <th>L-System Parameters</th>
+                </tr>
+                <tr>
+                  <td><b>Constants</b></td>
+                  <td><b>Variables</b></td>
+                </tr>
+                <tr>
+                  <td>'F'</td>
+                  <td>'+','-'</td>
+                </tr>
+                <tr>
+                  <td>Rotation Angle:</td>
+                  <td>60&deg;</td>
+                </tr>
+                <tr>
+                  <td>Move Distance:</td>
+                  <td>40</td>
+                </tr>
+
+                <tr>
+                  <td><b>Axiom</b></td>
+                  <td><b>Rules</b></td>
+                </tr>
+                <tr>
+                  <td>F-F-F-F</td>
+                  <td>F → F-F-F++F+F-F-</td>
+                </tr>
+                <tr>
+                  <td><strong>Iteration (n)</strong></td>
+                  <td><strong>Output</strong></td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>F-F-F-F (axiom)</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--++F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--+F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F----F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--++F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--+F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F----F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--++F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--+F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F----F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--++F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F--+F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---F-F-F++F+F-F--F-F-F++F+F-F--F-F-F++F+F-F-++F-F-F++F+F-F-+F-F-F++F+F-F--F-F-F++F+F-F---
+                  </td>
+                </tr>
+              </table>
+              <br />
+              <img src="../assets/La1Part3a.png" alt="LA1 Part 3" />
+              <p class="caption">Figure LA1 Part 3a: Iteration n = 4.</p>
+              <br />
+            </div>
+          </div>
+          <div>
+            <h5>Example 2: Fractal Curve</h5>
+            <div class="gallery">
+              <!--Code Gist-->
+              <script src="https://gist.github.com/JoshPattani/99b3fe087972691970cd8c0824c1f4e1.js"></script>
+              <!--Axiom and Rules table-->
+              <table>
+                <tr>
+                  <th>L-System Parameters</th>
+                </tr>
+                <tr>
+                  <td><b>Constants</b></td>
+                  <td><b>Variables</b></td>
+                </tr>
+                <tr>
+                  <td>'F'</td>
+                  <td>'+','-'</td>
+                </tr>
+                <tr>
+                  <td>Rotation Angle:</td>
+                  <td>45&deg;</td>
+                </tr>
+                <tr>
+                  <td>Move Distance:</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td><b>Axiom</b></td>
+                  <td><b>Rules</b></td>
+                </tr>
+                <tr>
+                  <td>X+F</td>
+                  <td>'X' -> "X-YF+FY-X"</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>'Y' -> "Y+XF-XF+Y"</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Iteration (n)</strong></td>
+                  <td><strong>Output</strong></td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>X+F (axiom)</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>X-YF+FY-X+F</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X+F</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X-Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+YF+FY+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X+F
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X-Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+YF+FY+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X-Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y+X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-XF-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-XF+Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+YF+FY+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y+X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-XF-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-XF+Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X-Y+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+YF+FY+XF-XF+Y+X-YF+FY-XF-X-YF+FY-XF+Y+XF-XF+Y-X-YF+FY-X-Y+XF-XF+YF+FY+XF-XF+Y-X-YF+FY-X+F
+                  </td>
+                </tr>
+              </table>
+
+              <br />
+              <img src="../assets/La1Part3b.png" alt="LA1 Part 3" />
+              <p class="caption">Figure LA1 Part 3b: Iteration n = 6.</p>
+              <br />
+            </div>
+          </div>
+          <div>
+            <h5>Example 3: Branching Structure</h5>
+            <div class="gallery">
+              <!--Code Gist-->
+              <script src="https://gist.github.com/JoshPattani/f4af6162171c5d8b8790ad3649274ebb.js"></script>
+              <!--Axiom and Rules table-->
+              <table>
+                <tr>
+                  <th>L-System Parameters</th>
+                </tr>
+                <tr>
+                  <td><b>Constants</b></td>
+                  <td><b>Variables</b></td>
+                </tr>
+                <tr>
+                  <td>'F'</td>
+                  <td>'+','-'</td>
+                </tr>
+                <tr>
+                  <td>Rotation Angle:</td>
+                  <td>45&deg;</td>
+                </tr>
+                <tr>
+                  <td>Move Distance:</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td><b>Axiom</b></td>
+                  <td><b>Rules</b></td>
+                </tr>
+                <tr>
+                  <td>"F"</td>
+                  <td>'F' -> "F[+F]F[-F]F"</td>
+                </tr>
+                <tr>
+                  <td><strong>Iteration (n)</strong></td>
+                  <td><strong>Output</strong></td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>F (axiom)</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>F[+F]F[-F]F</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F[+F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F]F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F]F[+F]F[-F]F[+F[+F]F[-F]F]F[+F]F[-F]F[-F[+F]F[-F]F]F[+F]F[-F]F
+                  </td>
+                </tr>
+              </table>
+              <img src="../assets/La1Part3c.png" alt="LA1 Part 3" />
+              <p class="caption">Figure LA1 Part 3c: Iteration n = 4.</p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </body>
 </html>

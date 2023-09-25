@@ -180,6 +180,20 @@ img {
   height: auto;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #000000;
+  font-size: 18px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #000000;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
