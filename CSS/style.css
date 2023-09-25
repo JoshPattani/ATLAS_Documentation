@@ -196,7 +196,7 @@ td {
 
 .gal {
   display: flex;
-  max-width: 40%;
+  max-width: 1920px;
   max-height: 480px;
 }
 
