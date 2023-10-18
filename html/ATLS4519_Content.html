@@ -25,6 +25,7 @@
             <li><a href="#post-1">Blog #1</a></li>
             <li><a href="#post-2">LA1 - L-Systems</a></li>
             <li><a href="#post-3">M2 - Lasered!</a></li>
+            <li><a href="#post-4">LA2 - Stacking Up!</a></li>
           </ul>
         </nav>
       </div>
@@ -672,6 +673,155 @@
               <img
                 src="../assets/Comp.Fab/LsystemBranchingEngraving.jpg"
                 alt="L-System Graphic Design Laser Engraving"
+              />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!--blog post 4-->
+    <!--LA2: 3D Parametric Design and Slicing for Laser Cutting -->
+    <!--write up structure: -->
+    <!--1. Title of Assignment
+          2. Brief Description
+          3. Materials Used
+          4. For each part of the assignment:
+            - Procedure
+            - Mathematical Calculations
+            - Pictures and video documentation of output
+            - Code (using GitHub Gist; see style guidelines)
+          5. Problems Faced and Conclusion
+          -->
+    <div class="container">
+      <article id="post-4">
+        <div class="post-container">
+          <h2>LA #2 - 3D Parametric Design and Slicing for Laser Cutting</h2>
+          <h3>Part 1: Parametric 3D Designs in Grasshopper</h3>
+        </div>
+        <div class="post-container">
+          <div class="post-container">
+            <h4>Part 1a: Parametric 3D Design of a 3D Printed Object</h4>
+            <p>
+              The 3D models were created in Rhino using Grasshopper. The
+              Grasshopper script includes multiple controllable parameters that
+              can be used to change the geometry of the generated shape.
+            </p>
+            <br />
+            <p>
+              The variable parameters include: 1. Size of object, which is
+              determined by the size of the radius and height that will be used
+              to create it. 2. Number of layers, which is used to determine the
+              number of lofted surfaces that will be stacked on top of each
+              other to create the solid object. 3. Sinusoidal curvature of the
+              object, this parameter is controlled through the graph mapper
+              component in grasshopper to scale the section curves of the object
+              along a sine wave profile. 4. Rotation of the section curves, the
+              angle of rotation is input via a controllable domain to rotate
+              each section curve of the object by stepping through the range.
+            </p>
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_GH_fullComponents.png"
+                alt="Screenshot of grasshopper script"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_GH_components.png"
+                alt="Screenshot of grasshopper script"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_GH_components01.png"
+                alt="Screenshot of grasshopper script"
+              />
+            </div>
+            <div class="gallery">
+              <script src="https://gist.github.com/JoshPattani/5f433824d93f5d2e5d85fa49377680fc.js"></script>
+              <img
+                src="../assets/Comp.Fab/LA2/parametricForm.jpg"
+                alt="3D Parametric Design"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/parametricForm01.jpg"
+                alt="3D Parametric Design"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/parametricForm02.jpg"
+                alt="3D Parametric Design"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/parametricForm03.jpg"
+                alt="3D Parametric Design"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/parametricForm04.jpg"
+                alt="3D Parametric Design"
+              />
+            </div>
+          </div>
+          <div class="post-container">
+            <h4>
+              Part 2: Laser Cut Fabrication of a Parametrically Designed 3D
+              Object
+            </h4>
+
+            <p>
+              The 3D models were created in Rhino using Grasshopper. The shapes
+              were prepared to be laser cut using a Grasshopper script. The
+              script components takes contours of the object along the Z-axis,
+              the number of contours is determined by a number slider labeled
+              'Mat. Thickness'. The contours are then arranged onto a grid
+              created by the rectangular grid component in grasshopper. The
+              sections were then baked to Rhino in preparation of laser cutting.
+            </p>
+            <br />
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_GH_ContourLaserComps.png"
+                alt="Screenshot of grasshopper script"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_gridArrange.png"
+                alt="3D Parametric Design Curves"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_gridArrange01.png"
+                alt="3D Parametric Design Curves"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/LA2_gridArrange02.png"
+                alt="3D Parametric Design Curves"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCut.jpg"
+                alt="3D Parametric Design Laser Cut"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCut01.jpg"
+                alt="3D Parametric Design Laser Cut"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCut02.jpg"
+                alt="3D Parametric Design Laser Cut"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCut03.jpg"
+                alt="3D Parametric Design Laser Cut"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCutFab.jpg"
+                alt="3D Parametric Design Laser Cut Fabrication"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCutFab01.jpg"
+                alt="3D Parametric Design Laser Cut Fabrication"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCutFab02.jpg"
+                alt="3D Parametric Design Laser Cut Fabrication"
+              />
+              <img
+                src="../assets/Comp.Fab/LA2/laserCutFab03.jpg"
+                alt="3D Parametric Design Laser Cut Fabrication"
               />
             </div>
           </div>
