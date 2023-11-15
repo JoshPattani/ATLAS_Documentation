@@ -26,7 +26,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: #b5b5b5;
+  color: hsl(0, 0%, 75%);
   text-align: left;
   background-color: #4c4c4c;
 }
@@ -194,6 +194,39 @@ article {
   gap: 10px;
 }
 
+.post-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.post-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.post-container h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.post-container p {
+  text-align: center;
+  max-width: 60%;
+  font-size: 1rem;
+}
+
 .post-container img {
   max-width: 80%;
   height: auto;
@@ -220,6 +253,14 @@ article {
 .gallery img {
   max-width: 60%;
   height: auto;
+}
+
+.gallery figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 
 #gallery {

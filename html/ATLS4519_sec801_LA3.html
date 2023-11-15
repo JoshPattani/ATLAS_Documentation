@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ATLS4519-801 Documentation Blog - LA3 - “Travel through Another Dimension”
+    </title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div id="title">
+          <h1>Building a Basic Slicer for 3D Printing</h1>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="http://www.jpattani.me/ATLAS_Documentation/html/index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <article id="Post-5">
+          <h2>Task 1: Create A Basic Slicer for 3D Printing</h2>
+          <div
+            class="post-container"
+            style="text-align: center; margin-bottom: 2em"
+          >
+            <h3>Project Files</h3>
+            <ul>
+              <li>
+                <a
+                  href="../assets/Comp.Fab/LA3/LA3_basicSlicerFor3dPrinting.gh"
+                  download="LA3_JPattani_basicSlicerFor3dPrinting.gh"
+                  >Grasshopper File</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/Comp.Fab/LA3/Gcode/output.gcode"
+                  download="JP_output.gcode"
+                  >Gcode File</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="post-container">
+            <h3>Creating Geometry</h3>
+            <p>
+              A closed cylinder was created in order to test my basic slicer for
+              3D printing. This was done in Grasshopper by creating a circle,
+              extruding it, and capping the holes.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/circleInit.png"
+                alt="circular curve in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/extrudedCylinder.png"
+                alt="capped extruded circular curve in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/ghComponents.png"
+                alt="Grasshopper component for cylinder geometry"
+              />
+            </div>
+          </div>
+          <div class="post-container">
+            <h3>Creating the Infill Lines</h3>
+            <p>
+              The cylinder was then sliced into contours along the Z-axis. The
+              bounding geometry of the contours were then used to create lines
+              that would be used as the infill lines.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/contourBoundingBox.png"
+                alt="bounding geometry in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/contourBoxEdge.png"
+                alt="edge of bounding box in 3d modeling software"
+              />
+            </div>
+            <br />
+            <p>
+              The series of lines were scaled to be larger than the contours
+              before performing the boolean intersect & join operations.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/lineArrayScaled.png"
+                alt="array of infill lines through contour in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/lineContourBrep.png"
+                alt="infill lines intersecting with contour in 3d modeling software"
+              />
+            </div>
+            <br />
+            <p>
+              Once the test polyline was successful, the height of the cylinder
+              was increased to 3 cm to create the layers for slicing.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/lineContourBrep01.png"
+                alt="infill lines trimmed to contour in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/ghComponents01.png"
+                alt="Grasshopper algorithm to generate infill lines in 3d modeling software"
+              />
+            </div>
+            <br />
+            <p>
+              The infill curves were then discretized into points to create the
+              infill line segments.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/brepDiscretized.png"
+                alt="infill lines discretized into points in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/curveExplode.png"
+                alt="infill lines exploded into segments in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/ghComponents02.png"
+                alt="Grasshopper algorithm to generate infill lines in 3d modeling software"
+              />
+            </div>
+          </div>
+          <div class="post-container">
+            <h3>Creating the Gcode</h3>
+            <p>
+              The Gcode was created by using the GHPython script component in
+              Grasshopper. The Gcode was then exported as a text file and saved
+              as a .gcode file.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <script src="https://gist.github.com/JoshPattani/a1a2e18d91d8c1061955d59b80353591.js"></script>
+              <img
+                src="../assets/Comp.Fab/LA3/ghComponents03.png"
+                alt="Grasshopper algorithm to generate and export gcode text file"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/GcodeOutput.png"
+                alt="Gcode text file"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/gcodeAnalyzer.png"
+                alt="Gcode Analyzer"
+              />
+            </div>
+          </div>
+          <div class="post-container">
+            <h3>EXTRA CREDIT: Advanced Slicing and 3D Printing</h3>
+            <p>
+              I decided to try and create a more advanced slicer by creating a
+              variable for infill density. I used the same process as above to
+              create the infill lines and Gcode, added percentage variable
+              components within my Grasshopper algorithm.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/LA3/ghInfillDensityComponents.png"
+                alt="Grasshopper algorithm to generate infill lines in 3d modeling software"
+              />
+              <img
+                src="../assets/Comp.Fab/LA3/ghVariableInfillDensity.png"
+                alt="Grasshopper components for varying infill density"
+              />
+              <figure>
+                <figcaption>10% Infill Density</figcaption>
+                <img
+                  src="../assets/Comp.Fab/LA3/infillDensity_10.png"
+                  alt="10% density of slicing infill"
+                />
+              </figure>
+              <figure>
+                <figcaption>20% Infill Density</figcaption>
+                <img
+                  src="../assets/Comp.Fab/LA3/infillDensity_20.png"
+                  alt="20% density of slicing infill"
+                />
+              </figure>
+              <figure>
+                <figcaption>50% Infill Density</figcaption>
+                <img
+                  src="../assets/Comp.Fab/LA3/infillDensity_50.png"
+                  alt="50% density of slicing infill"
+                />
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
