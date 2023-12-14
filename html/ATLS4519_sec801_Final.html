@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Computational Fabrication Final Project: Computational Design and
+      Fabrication of Three Dimensional L-systems
+    </title>
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div id="title">
+          <h1>Computational Fabrication Final Project</h1>
+          <br />
+          <h2>
+            Computational Design and Fabrication of Three Dimensional L-systems
+          </h2>
+          <h3>by Josh Pattani</h3>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="http://www.jpattani.me/ATLAS_Documentation/html/index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <article id="Post-5">
+          <div
+            class="post-container"
+            style="text-align: center; margin-bottom: 2em"
+          >
+            <h3>Project Files</h3>
+            <ul>
+              <li>
+                <a href="../assets/Comp.Fab/Final/3d_L-systemGenerator.gh"
+                  >Grasshopper File</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h2>Project Pitch</h2>
+          <div class="post-container">
+            <p>
+              The goal of this project is to create a computational design and
+              fabrication workflow for three dimensional L-systems. I was
+              inspired by my fascination of L-systems, ever since creating 2d
+              variations earlier in the semester I have been eager to explore
+              the possibilities of these forms in 3d. The workflow is
+              implemented in Grasshopper and Rhino. The L-system geometry can be
+              mapped onto a surface geometry, which is used to generate 3D
+              printed forms of a three dimensional L-systems variations.
+            </p>
+          </div>
+          <h2>Walkthrough of Functionality</h2>
+          <div class="post-container">
+            <p>
+              The Grasshopper and Rhino workflow is broken down into three main
+              parts: 1) the surface Geometry, 2) the L-system, and 3) volumetric
+              modeling. The Grasshopper definition begins by creating surface
+              geometry. Users can choose from various primitive shapes or target
+              external surfaces to initiate the foundation for the L-system.
+            </p>
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/3d_Lsystem_GH.png"
+                alt="Surface Grasshopper components"
+              />
+            </div>
+            <br />
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/surfaceGH.png"
+                alt="Surface Grasshopper components"
+              />
+              <img src="../assets/Comp.Fab/Final/sphere.png" alt="Sphere" />
+              <img
+                src="../assets/Comp.Fab/Final/sphereSurfaces.png"
+                alt="Sphere Surfaces"
+              />
+            </div>
+            <br />
+            <p>
+              The L-system is implemented in Grasshopper using the Rabbit
+              plugin. The Rabbit library contains components to implement a
+              L-system and generate Turtle-drawn geometry. Users will be able to
+              customize the L-system through a variety of parameters. I have
+              included a variety of axioms and production rule sets, but these
+              can be modified if users wish to do so.
+            </p>
+            <br />
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/3d_Lsystem_GH.png"
+                alt="Lsystem Grasshopper components"
+              />
+            </div>
+          </div>
+          <h2>Design Process</h2>
+          <div class="post-container">
+            <p>
+              The Rabbit library's Lsystem component generates an L-system using
+              inputs to control the axiom, rule sets, and iteration count.
+              Rabbit's turtle component uses the computed grammar to generate
+              the corresponding L-system geometry. There are also parameters to
+              control the Turtle's step length, step scale, and rotation angle.
+              The L-system is mapped to the target surface by providing the
+              turtle the object's surface frames as it's initial location and
+              orientation.
+            </p>
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/turtleCurves.jpg"
+                alt="Grasshopper rhino output"
+              />
+            </div>
+            <br />
+            <p>
+              The Dendro Grasshopper plugin affords the power and accuracy of
+              volumetric modeling. The L-system curves are used to generate a
+              manipulable mesh. Here we can control the size and resolution of
+              the generated mesh, which is then converted to a volume object.
+              Finally, the original target surface is converted to a volume and
+              joined with the turtle volume to create a solid to then be
+              exported as an STL file for 3D printing.
+            </p>
+            <!--Gallery-->
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/Progress/meshModelGH.png"
+                alt="Lsystem Grasshopper components"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/modelExample01.png"
+                alt="Grasshopper rhino output"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/volumeRes.jpg"
+                alt="Grasshopper rhino output"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/modelExample02.png"
+                alt="Grasshopper rhino output"
+              />
+            </div>
+            <br />
+          </div>
+          <h2>Physical</h2>
+          <div class="post-container">
+            <p>
+              The physical output of this project is a 3D printed object. I
+              modified the geometry to make it a functional plant pot, as well
+              as slicing off the bottom to create a flat surface that would be
+              easier to print.The object was printed using PLA filament on a
+              Prusa MINI 3D printer. The objects are printed with a 0.15mm layer
+              height and 20% infill. The objects are printed with snug supports.
+            </p>
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/3dLs_PrusaSLicer.png"
+                alt="object slicing in PrusaSlicer"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/3dPrinting.jpg"
+                alt="3d printing output"
+              />
+            </div>
+            <br />
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/finalObject.jpg"
+                alt="physical output"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/finalObject01.jpg"
+                alt="physical output"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/finalObject02.jpg"
+                alt="physical output"
+              />
+            </div>
+            <br />
+            <div class="gallery">
+              <img
+                src="../assets/Comp.Fab/Final/finalObject03.jpg"
+                alt="physical output"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/finalObject04.jpg"
+                alt="physical output planter"
+              />
+              <img
+                src="../assets/Comp.Fab/Final/finalObject05.jpg"
+                alt="physical output planter"
+              />
+            </div>
+            <br />
+          </div>
+          <h2>Reflection</h2>
+          <div class="post-container">
+            <p>
+              Overall I am satisfied with the results of this project. The
+              process was more difficult in the beginning when I was attempting
+              to build the GH definition with a python program to implement the
+              3d L-system geometry. Upon doing more research and finding those
+              plugins I scrapped that approach entirely. Afterwards, the process
+              felt entirely streamlined and actually ended up being easier than
+              I had thought. Next time I would I would add more surface
+              manipulation techniques to make the objects even more organic, but
+              I didn't have enough time to implement them efficiently. When
+              adding some components from the Weaverbird library to the program,
+              I think I crashed grasshopper over 5 times without any success.
+              Additionally, I would look into some other types of 3d printing,
+              aside from FDM, to fabricate these. SLA was suggested, but I was
+              unable to complete the tour/workshop at the Idea Forge in enough
+              time to fabricate. I think SLA would have allowed for more freedom
+              in the physical output geometry.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
